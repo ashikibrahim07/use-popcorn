@@ -262,6 +262,33 @@
   }
 }
 
+@media (max-width: 375px) {
+  .summary {
+    padding: 2rem 3rem 1rem 3rem;
+  }
+
+  .summary h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .summary div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .summary p {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+  }
+}
+
 @media (max-width: 320px) {
   .logo span {
     font-size: 2.8rem;
