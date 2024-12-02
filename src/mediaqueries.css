@@ -28,6 +28,11 @@
     font-size: 1.4rem;
   }
 
+  .details {
+    transform: none; /* No need for transform on larger screens */
+    box-shadow: none; /* Remove highlight for desktop */
+  }
+
   .details img {
     width: 50%;
   }
@@ -287,6 +292,64 @@
     gap: 0.3rem;
     margin-bottom: 1rem;
   }
+
+  .details-overview p,
+  em {
+    font-size: 1.5rem !important;
+  }
+
+  .watched-movie {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .movie-poster {
+    width: 40px !important;
+    height: auto;
+    border-radius: 4px;
+    margin-right: 1rem;
+  }
+
+  .movie-title,
+  .imdb-rating,
+  .user-rating {
+    font-size: 1.5rem !important;
+  }
+
+  .movie-rating {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: white;
+    margin: 0.1rem 0;
+  }
+
+  .movie-runtime {
+    font-size: 1.5rem;
+    margin-right: 2.2rem;
+  }
+
+  .rating-star {
+    font-size: 1.5rem;
+  }
+
+  .btn-delete {
+    position: absolute;
+    right: 1rem;
+    height: 1.8rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-red);
+    color: var(--color-background-900);
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
 }
 
 @media (max-width: 320px) {
@@ -300,11 +363,6 @@
 
   .summary h2 {
     font-size: 1.4rem;
-  }
-
-  .details img {
-    width: 100%;
-    max-width: 8rem;
   }
 
   .details {

@@ -1,8 +1,11 @@
 import { useState, useRef, useEffect } from "react";
+import Modal from "react-modal";
 import { KEY } from "../App";
 import { Loader } from "./Loader";
 import StarRating from "./StarRating";
 import { usekey } from "../hooks/useKey";
+
+Modal.setAppElement("#root"); // Important for accessibility
 
 export function MovieDetails({
   selectedId,
@@ -84,11 +87,17 @@ export function MovieDetails({
   usekey("Escape", handleCloseMovie);
 
   return (
-    <div className="details">
+    <Modal
+      isOpen={!!selectedId}
+      onRequestClose={handleCloseMovie}
+      contentLabel="Movie Details"
+      className="modal"
+      overlayClassName="overlay"
+    >
       {isLoading ? (
         <Loader />
       ) : (
-        <>
+        <div className="details">
           <header>
             <button className="btn-back" onClick={handleCloseMovie}>
               &larr;
@@ -112,7 +121,6 @@ export function MovieDetails({
               {!isWatched ? (
                 <>
                   <StarRating maxRating={10} size={24} onSet={setUserRating} />
-
                   {userRating > 0 && (
                     <button className="btn-add" onClick={handleAdd}>
                       + Add to List
@@ -133,8 +141,8 @@ export function MovieDetails({
               <em>Directed by {director}</em>
             </p>
           </section>
-        </>
+        </div>
       )}
-    </div>
+    </Modal>
   );
 }
