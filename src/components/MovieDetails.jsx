@@ -5,7 +5,7 @@ import { Loader } from "./Loader";
 import StarRating from "./StarRating";
 import { usekey } from "../hooks/useKey";
 
-Modal.setAppElement("#root"); // Important for accessibility
+Modal.setAppElement("#root"); 
 
 export function MovieDetails({
   selectedId,

@@ -107,7 +107,7 @@ body {
 }
 
 .search::placeholder {
-  color: var(--color-text-dark);
+  color: var(--color-text);
 }
 
 .search:focus {
@@ -369,4 +369,26 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-background-900);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.footer a {
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }

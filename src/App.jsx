@@ -15,6 +15,7 @@ import { MovieList } from "./components/MovieList.jsx";
 import { MovieDetails } from "./components/MovieDetails.jsx";
 import { WatchedSummary } from "./components/WatchedSummary.jsx";
 import { WatchedMoviesList } from "./components/WatchedMoviesList.jsx";
+import Footer from "./components/Footer.jsx";
 
 export const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
@@ -80,6 +81,8 @@ export default function App() {
           )}
         </Box>
       </Main>
+
+      <Footer />
     </>
   );
 }
