@@ -1,11 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 import Modal from "react-modal";
+import { IoArrowBackOutline } from "react-icons/io5";
+
 import { KEY } from "../App";
 import { Loader } from "./Loader";
 import StarRating from "./StarRating";
 import { usekey } from "../hooks/useKey";
 
-Modal.setAppElement("#root"); 
+Modal.setAppElement("#root");
 
 export function MovieDetails({
   selectedId,
@@ -91,7 +93,7 @@ export function MovieDetails({
       isOpen={!!selectedId}
       onRequestClose={handleCloseMovie}
       contentLabel="Movie Details"
-      className="modal"
+      className={isLoading ? "test" : "modal"}
       overlayClassName="overlay"
     >
       {isLoading ? (
@@ -100,7 +102,7 @@ export function MovieDetails({
         <div className="details">
           <header>
             <button className="btn-back" onClick={handleCloseMovie}>
-              &larr;
+              <IoArrowBackOutline />
             </button>
             <img src={poster} alt={`Poster of ${title} movie`} />
             <div className="details-overview">

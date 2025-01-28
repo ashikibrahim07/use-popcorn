@@ -1,3 +1,7 @@
 export function Loader() {
-  return <p className="loader">Loading...</p>;
+  return (
+    <div className="loader-container">
+      <h1 className="loader"></h1>
+    </div>
+  );
 }
